@@ -1,0 +1,39 @@
+/* whole page */
+.products-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+.products-list {
+  display: flex;
+  flex-wrap: wrap;        /* THIS makes items go to next line */
+  gap: 20px;              /* space between cards */
+}
+/* heading */
+.products-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* product card */
+.product-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  width: 200px;           /* fixed card width */
+  border-radius: 6px;
+  background-color: #f9f9f9;
+}
+/* product name */
+.product-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* product price */
+.product-price {
+  color: green;
+}
+.product-image {
+  width: 100%;            /* image stays inside card */
+  height: auto;
+  object-fit: cover;
+}
