@@ -1,25 +1,106 @@
-## How to run--
-i install nodemon so it run -- nodemon server.js
-The starting point of backend is server.js
+
+🛍️ Naksh Jewels – Full Stack Assignment
+
+This project is a full-stack internship assignment built using React (Frontend) and Node.js + Express.js
+
+📁 Project Structure
+Assignment/
+├── backend/
+│   ├── controllers/
+│   │   ├── productController.js
+│   │   └── cartController.js
+│   ├── routes/
+│   │   ├── productRoutes.js
+│   │   └── cartRoutes.js
+│   ├── data/
+│   │   └── demoData.js
+│   ├── server.js
+│   └── package.json
+│
+├── frontend/
+│   ├── src/
+│   │   ├── context/
+│   │   │   └── CartContext.jsx
+│   │   ├── pages/
+│   │   │   ├── Products.jsx
+│   │   │   └── Cart.jsx
+│   │   └── App.jsx
+│   └── package.json
+│
+└── README.md
+
+🔑 Features (As Per Assignment PDF)
+✔ Product Listing
+
+Products are fetched from backend demo data
+
+Displayed on frontend using React
+
+✔ Add to Cart
+
+Clicking Add to Cart:
+
+Calls backend API using GET with params
+
+Example: GET /api/cart/:id
+
+Frontend cart state managed using Context API
+
+✔ Cart Page
+
+Displays added products
+
+Shows quantity
+
+Allows removing items from cart
+
+🌐 API Endpoints
+Get Products
+GET /api/products
 
 
-## make first API request --
-* where  the products can be display in JSON format.
-* make succesfully route where it display -- /api/products
+Returns demo product list.
+
+Add to Cart (Assignment Requirement)
+GET /api/cart/:id
 
 
-## making cart API --
-* add AddToCart logic in the web app in cartController
-* now adding a middelware to authenticate the product is valid or not
-* made middelware checking the validation of cart -- cartMiddelware
-* made a controller to addToCart in server whenever client click on addToCart feature.
+Uses URL params (req.params.id)
 
----------------------------------------------------------------------------------------------------
- * addTocart controller and add middelware in it so the route become safe 
- * cart routes are - /api/cart
-------------------------------------------------------------------------------------------------
-* successfully tested my cart APi it working fine and push full backend in the github.
+Implemented using controller
 
-## Backend is completed now lets jump to the frontend.
----------------------------------------------------------------------------------------------------
+No database logic (as per PDF scope)
+
+🧠 Architecture Notes
+
+Backend follows MVC pattern
+
+Routes handle URL mapping
+
+Controllers handle logic
+
+Cart logic and quantity handling are managed on the frontend using Context API
+
+Backend cart API is a dummy endpoint used only to demonstrate frontend–backend communication (as required)
+
+▶️ How to Run the Project
+Backend
+cd backend
+npm install
+npm start
+
+
+Server runs on:
+
+http://localhost:5000
+
+Frontend
+cd frontend
+npm install
+npm run dev
+
+
+Frontend runs on:
+
+http://localhost:5173
 

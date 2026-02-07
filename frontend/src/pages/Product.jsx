@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { getproducts } from '../services/getproduct';
 import "./Product.css"
+import { CartContext } from '../context/CartContext';
 
 
 const Product = () => {
     const [products , setProducts] = useState([]);
+    const { addToCart } = useContext(CartContext);
+
 
     //add useEffect to render the data 
     useEffect(()=>{
@@ -25,9 +28,9 @@ const Product = () => {
         {products.map((item)=>(
             <div className='product-card'key={item.id}>
                 <p className='product-name'>{item.name}</p>
-                <p className='product-price'>{item.price}</p>
+                <p className='product-price'>${item.price}</p>
                 <img className='product-image' src={item.image}/>
-                <button onClick={()=>addtocarthandler(item)} >Add To Cart</button>
+                <button onClick={()=>addToCart(item)} >Add To Cart</button>
             </div>
          
         ))}
